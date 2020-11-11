@@ -32,50 +32,20 @@
         "required" : false
       },
       "USERNAME": {
-        "Description" : "username of the SF Connected App",
+        "Description" : "Username used to connect to the Salesforce Streaming api",
         "value" : "username of the SF Connected App",
         "required" : false
       },
       "PASSWORD": {
-        "Description" : "password of the SF connected App",
+        "Description" : "Passowrd of the user connected to the Salesforce Streaming api",
         "value" : "password of the SF connected App",
         "required" : false
       },
       "TOPICS": {
         "Description" : "list of Topics on Salesforce to listen to",
-        "value" : "/topic/hc_301586;/data/AccountChangeEvent;/event/XX",
-        "required" : false
+        "value" : "/event/RemoteCompute__e",
+        "required" : true
       },
-      "KAFKA_URL": {
-        "Description" : "KAFKA Url to connect to - will be filled if you deploy Heroku Kafka Addon",
-        "value" : "KAFKA Url to connect to - will be filled if you deploy Heroku Kafka Addon",
-        "required" : false
-      },
-      "KAFKA_CLIENT_CERT": {
-        "Description" : "Kafka Client certificate - will be filled if you deploy Heroku Kafka Addon",
-        "value" : "Kafka Client certificate - will be filled if you deploy Heroku Kafka Addon",
-        "required" : false
-      },
-      "KAFKA_CLIENT_CERT_KEY": {
-        "Description" : "Kafla Client Key - will be filled if you deploy Heroku Kafka Addon ",
-        "value" : "Kafla Client Key - will be filled if you deploy Heroku Kafka Addon ",
-        "required" : false
-      },
-      "KAFKA_TRUSTED_CERT": {
-        "Description" : "Kafka CA - will be filled if you deploy Heroku Kafka Addon",
-        "value" :  "Kafka CA - will be filled if you deploy Heroku Kafka Addon",
-        "required" : false
-      },
-      "KAFKA_PREFIX": {
-        "Description" : "Kafka topic prefix - will be filled if you deploy Heroku Kafka Addon",
-        "value" : "Kafka topic prefix - will be filled if you deploy Heroku Kafka Addon",
-        "required" : false
-      },      
-      "CLOUDAMQP_URL": {
-        "Description" : "CLOUDAMQP_URL to be filled by cloudamqp addon later",
-        "value" : "CLOUDAMQP_URL to be filled by cloudamqp addon later",
-        "required" : false
-      }, 
       "QUEUING_SYSTEM": {
         "Description" : "Which system to use for the queuing system: values are KAFKA/CLOUDAMQP. Will default to CLOUDAMQP",
         "value" : "CLOUDAMQP",

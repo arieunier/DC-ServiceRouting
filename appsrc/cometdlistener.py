@@ -19,7 +19,6 @@ SERVICE_NAME='cometdrabbit'
 async def stream_events():
     # connect to Streaming API
     async with SalesforceStreamingClient( sandbox=config.SANDBOX, consumer_key=CONSUMER_KEY, consumer_secret=CONSUMER_SECRET, username=USERNAME, password=PASSWORD) as client:
-
         topics=[]
         for topic in TOPICS.split(";"):
         
@@ -51,6 +50,7 @@ async def stream_events():
             utils.serviceTracesAndNotifies(message, SERVICE_NAME, SERVICE_NAME + ' - Job queued to desired service', False)
 
 if __name__ == "__main__":
+    import os 
     queuer.initQueuer()
     loop = asyncio.get_event_loop()
     loop.run_until_complete(stream_events())

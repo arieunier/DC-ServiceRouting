@@ -33,8 +33,3 @@ create table public.ServiceAttribute(
         AttributeDescription varchar(1024) not null,
         AttributeAllowedValues varchar(1024)
 );
-
-insert into public.ServiceDefinition(id, ServiceName, ServiceLabel, ServiceDescription) values ('1','accountscreation','Mass Account Creation', 'Creates a large number of accounts.');
-insert into public.ServiceAttribute(id, refServiceDefinitionId, AttributeName, AttributeLabel, AttributeDescription) values ('1','1',' AccountQuantity  ','Number of accounts', 'Number of accounts to create. Please enter a positive number');
-insert into public.ServiceAttribute(id, refServiceDefinitionId, AttributeName, AttributeLabel, AttributeDescription) values ('2','1',' NamePattern  ','Account name pattern', 'Pattern to use to generate the name of the account. Please enter a string');
-insert into public.ServiceAttribute(id, refServiceDefinitionId, AttributeName, AttributeLabel, AttributeDescription, AttributeAllowedValues) values ('3','1',' RandomAttribute  ','Random Attribute', 'To test allowed values', 'Test,ABCD,QSD');
