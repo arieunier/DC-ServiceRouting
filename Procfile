@@ -1,1 +1,1 @@
-cometdlistener: export PYTHONPATH=.:./appsrc:./appsrc/libs/; python appsrc/cometdlistener.py
+cometdlistener: export PYTHONPATH=$PYTHONPATH:.:./appsrc:./appsrc/libs/; python appsrc/cometdlistener.py

@@ -1,6 +1,6 @@
 import asyncio
 from aiosfstream import SalesforceStreamingClient
-from libs import queuer, logs, rabbitmq_utils, config, postgres, utils
+from dclibs import queuer, logs, rabbitmq_utils, config, postgres, utils
 
 
 
